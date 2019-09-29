@@ -3,13 +3,28 @@ package com.galvanize;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class Application {
 
     public static void main(String[] args) {
         //=====================================
+        // ** Accumulator Example **
+        //=====================================
+        System.out.println("ACCUMULATOR EXAMPLE");
+        System.out.println("-------------------");
+
+        Accumulator acc = new Accumulator();
+        List<Integer> input = Arrays.asList(1,2,4,5);
+
+        System.out.println(acc.sum(input));
+        System.out.println(" ");
+
+        //=====================================
         // ** HashMaps **
         //=====================================
+        System.out.println("HASHMAP EXAMPLE");
+        System.out.println("-------------------");
         HashMap<String, Integer> birthYears = new HashMap<>();
         birthYears.put("David", 1979);
         birthYears.put("Esther", 1994);
