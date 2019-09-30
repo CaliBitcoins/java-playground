@@ -11,6 +11,7 @@ public class Application {
         //=====================================
         // ** Accumulator Example **
         //=====================================
+        // EXAMPLE No. 1
         System.out.println("ACCUMULATOR EXAMPLE");
         System.out.println("-------------------");
 
@@ -18,6 +19,9 @@ public class Application {
         List<Integer> input = Arrays.asList(1,2,4,5);
 
         System.out.println(acc.sum(input));
+
+        // Example No. 2
+        System.out.println(acc.shortWords("Mushroom, pill, drink, thong, crystal, yellow, eat", 16));
         System.out.println(" ");
 
         //=====================================
@@ -38,7 +42,6 @@ public class Application {
             System.out.println(key);
             System.out.println(key + value);
         });
-
 
 
         //=====================================
