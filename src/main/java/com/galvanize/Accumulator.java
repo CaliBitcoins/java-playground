@@ -36,8 +36,10 @@ public class Accumulator {
     String toSentence(String[] test) {
         String result = "";
         int totalSize = test.length;
-        int limit = totalSize - 1;
+        int spaceIndex = totalSize - 1;
+        int limit = totalSize - 2;
         String seperator = ", ";
+        String spaceSeperator = " ";
         String finalSeperator = "and ";
         if (totalSize > 1) {
             String concat;
@@ -47,9 +49,14 @@ public class Accumulator {
                 concat = result + next;
                 result = concat;
             }
-            next = finalSeperator + test[limit];
+            next = test[limit] + spaceSeperator;
             concat = result + next;
             result = concat;
+            next = finalSeperator + test[spaceIndex];
+            concat = result + next;
+            result = concat;
+        } else if(totalSize == 1) {
+            result = test[0];
         }
 
         return result;
