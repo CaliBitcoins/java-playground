@@ -1,5 +1,6 @@
 package com.galvanize;
 
+import com.sun.tools.javac.util.StringUtils;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +27,29 @@ public class Accumulator {
             if (word.length() < maxLength) {
                 result.add(word);
             }
+        }
+
+        return result;
+    }
+
+    // Test Question
+    String toSentence(String[] test) {
+        String result = "";
+        int totalSize = test.length;
+        int limit = totalSize - 1;
+        String seperator = ", ";
+        String finalSeperator = "and ";
+        if (totalSize > 1) {
+            String concat;
+            String next;
+            for(int i = 0; i < limit; i++) {
+                next = test[i] + seperator;
+                concat = result + next;
+                result = concat;
+            }
+            next = finalSeperator + test[limit];
+            concat = result + next;
+            result = concat;
         }
 
         return result;

@@ -21,8 +21,12 @@ public class Application {
         System.out.println(acc.sum(input));
 
         // Example No. 2
-        System.out.println(acc.shortWords("Mushroom, pill, drink, thong, crystal, yellow, eat", 16));
+        System.out.println(acc.shortWords("Mushroom, pill, drink, thong, crystal, yellow, eat", 8));
         System.out.println(" ");
+
+        // Test Question
+        String[] test = {"Jake", "Drake", "Bob", "Eddie"};
+        System.out.println(acc.toSentence(test));
 
         //=====================================
         // ** HashMaps **
